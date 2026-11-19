@@ -1,0 +1,70 @@
+.history{
+  padding:30px 0 36px;
+  background:radial-gradient(ellipse at 49% 24%,#fff4e0 0%,#f1e2c6 79%,#e9d3af 100%);
+}
+.history>.shell{width:min(1270px,calc(100% - 68px))}
+.history .origin{
+  font:700 clamp(24px,3.7vw,42px)/1.07 Georgia,"Times New Roman",serif;
+  color:#721e15;max-width:850px;margin:0 auto 23px;letter-spacing:-.022em;
+}
+.history .origin::after{width:92px;height:3px;margin:19px auto 0;background:linear-gradient(90deg,#d3a45233,#be8b31,#f3d78b,#d3a45222);box-shadow:0 2px 2px #b58b4040}
+.history .carousel{
+  --card-width:min(62vw,576px);--card-gap:22px;
+  display:flex;gap:var(--card-gap);padding:3px 0 12px;border-radius:0;overflow:auto;
+}
+.history .carousel::after{flex:0 0 calc(100% - var(--card-width) - var(--card-gap))}
+.history .heritage-card{
+  display:block;position:relative;isolation:isolate;flex:0 0 var(--card-width);
+  aspect-ratio:576/218;min-height:0;border:0;border-radius:33px;overflow:hidden;
+  background:url(assets/heritage-frame.svg) center/100% 100% no-repeat;
+  box-shadow:0 6px 6px #8d582322;transition:filter .2s;
+}
+.history .heritage-card:not(.is-current){filter:saturate(.77);transform:scale(.94);transform-origin:left center}
+.history .heritage-card::after{content:none}
+.history .card-copy{position:relative;z-index:2;width:100%;padding:20px 38px 30px}
+.history .card .year{
+  color:#7b1711;font:400 clamp(44px,8.8vw,91px)/.94 Georgia,"Times New Roman",serif;
+  letter-spacing:-.055em;white-space:nowrap;
+}
+.history .card h3{
+  font:700 clamp(20px,3.4vw,38px)/1.03 Georgia,"Times New Roman",serif;
+  letter-spacing:-.026em;color:#702016;margin:6px 0 0;max-width:90%;
+}
+.history .card-art{position:absolute;inset:0 0 0 auto;width:36%;z-index:0;pointer-events:none;overflow:hidden}
+.history .card:first-child .card-art{background:url(assets/heritage-building.svg) right bottom/auto 100% no-repeat}
+.history .card-art img{
+  width:100%;height:100%;object-fit:cover;filter:sepia(1) saturate(.6) contrast(.8);
+  opacity:.19;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent,#000 60%);
+}
+.history .card .milestone-content{display:none}
+.history .carousel-controls{margin-top:0;gap:18px}
+.history #dots{gap:5px}
+.history #dots button{width:22px;height:32px}
+.history #dots button::before{width:12px;height:12px;background:#cdb58c}
+.history #dots button[aria-current=true]::before{background:#8b1713;transform:scale(1.12)}
+.history .carousel-controls>button{border:0;border-radius:50%;width:35px;height:35px;color:#8a341f}
+#milestone-detail{display:flex;align-items:center;gap:20px;width:min(760px,100%);margin:14px auto 0;padding:16px 0;border-top:1px solid #bc95554a;color:#673629}
+#milestone-detail>img{display:block;width:145px;aspect-ratio:1.8;object-fit:cover;border:3px solid #fff3d8;box-shadow:0 2px 5px #71441c36}
+#milestone-detail>div{flex:1;font-size:16px;line-height:1.5}
+#milestone-detail .milestone-stage{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:700;color:#7b2419;margin-bottom:3px}
+.film-btn{font-size:16px}
+@media(max-width:700px){
+  .history{padding-top:24px}
+  .history>.shell{width:calc(100% - 30px)}
+  .history .origin{font-size:clamp(23px,4.8vw,32px);line-height:1.12;letter-spacing:-.02em}
+  .history .origin br{display:none}
+  .history .carousel{--card-width:84vw;--card-gap:10px}
+  .history .heritage-card{border-radius:20px}
+  .history .card-copy{padding:4.1vw 6vw 5vw}
+  .history .card .year{font-size:clamp(38px,12.9vw,77px)}
+  .history .card h3{font-size:clamp(20px,5.3vw,31px);margin-top:3px}
+  #milestone-detail{gap:11px;padding:12px 0;align-items:start}
+  #milestone-detail>img{width:95px}
+  #milestone-detail>div{font-size:14px}
+  #milestone-detail .milestone-stage{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){.history .heritage-card{transition:none}}
+@media(max-width:700px){
+.history .card:not(:first-child) .year{font-size:clamp(35px,10vw,63px)}
+.history .card:not(:first-child) h3{font-size:clamp(20px,5.1vw,28px)}
+}
