@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="218" viewBox="0 0 576 218">
+<defs>
+ <linearGradient id="paper" x2="0.85" y2="1"><stop stop-color="#f6e9cf"/><stop offset=".5" stop-color="#f9edd7"/><stop offset="1" stop-color="#edd7b3"/></linearGradient>
+ <linearGradient id="edge"><stop stop-color="#d3a44c"/><stop offset=".15" stop-color="#ffe9a4"/><stop offset=".55" stop-color="#c39a49"/><stop offset=".82" stop-color="#f9dda0"/><stop offset="1" stop-color="#aa7629"/></linearGradient>
+ <linearGradient id="red" x2="1" y2=".6"><stop stop-color="#9a211b"/><stop offset=".6" stop-color="#801411"/><stop offset="1" stop-color="#ad2c1d"/></linearGradient>
+ <clipPath id="bound"><rect x="2" y="2" width="572" height="214" rx="32"/></clipPath>
+</defs>
+<rect x="1" y="1" width="574" height="216" rx="33" fill="url(#paper)" stroke="url(#edge)" stroke-width="2"/>
+<g clip-path="url(#bound)"><path d="M0 184C108 177 209 216 363 228L0 228Z" fill="url(#red)"/><path d="M0 183C114 177 220 216 363 227" stroke="#d9b260" stroke-width="2" fill="none"/></g>
+<rect x="5" y="5" width="566" height="208" rx="28" fill="none" stroke="#fff2bb" stroke-width="1.1"/>
+<rect x="8" y="3.5" width="564" height="210" rx="28" fill="none" stroke="#c49d57" stroke-opacity=".58" stroke-width=".65"/>
+</svg>
